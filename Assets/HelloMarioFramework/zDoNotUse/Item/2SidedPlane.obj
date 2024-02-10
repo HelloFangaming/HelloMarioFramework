@@ -1,0 +1,29 @@
+# ProBuilder 4.2.3
+# https://unity3d.com/unity/features/worldbuilding/probuilder
+# 1/28/2024 10:10:40 PM
+
+mtllib ./2SidedPlane.mtl
+o 2SidedPlane
+
+g Plane (1)
+v 0 0 0
+v -4 0 0
+v 0 8 0
+v -4 8 0
+
+vt 1 2
+vt 3 2
+vt 1 6
+vt 3 6
+vt -1 2
+vt -3 2
+vt -1 6
+vt -3 6
+
+vn 0 0 -1
+vn 0 0 1
+
+usemtl WoodMesh00_DS
+f 1/1/1 2/2/1 4/4/1 3/3/1
+f 3/7/2 4/8/2 2/6/2 1/5/2
+

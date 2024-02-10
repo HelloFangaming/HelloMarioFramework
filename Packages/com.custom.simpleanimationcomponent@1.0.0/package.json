@@ -1,0 +1,8 @@
+{
+  "name": "com.custom.simpleanimationcomponent",
+  "version": "1.0.0",
+  "displayName": "Simple Animation Component",
+  "description": "A simple Animation Component that leverages PlayableGraphs",
+  "unity": "2018.3",
+  "documentationUrl": "https://github.com/Unity-Technologies/SimpleAnimation"
+}

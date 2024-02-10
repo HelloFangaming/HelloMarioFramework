@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: fcaa08ed61eb9b845bae4329e9f6bf10
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - beepSFX: {fileID: 8300000, guid: f3918ce3b4e6103438676832ef1d1d7a, type: 3}
+  - swapSFX: {fileID: 8300000, guid: 08bebfe6b87d46e4693050b622d08cb8, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
