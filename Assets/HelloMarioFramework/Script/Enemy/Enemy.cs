@@ -32,7 +32,7 @@ namespace HelloMarioFramework
         private int collisionCount = 0;
 
         //Animator hash values
-        private static int chaseHash = Animator.StringToHash("Chase");
+        protected static int chaseHash = Animator.StringToHash("Chase");
         private static int stompHash = Animator.StringToHash("Stomp");
         private static int speedHash = Animator.StringToHash("Speed");
         private static int groundHash = Animator.StringToHash("onGround");

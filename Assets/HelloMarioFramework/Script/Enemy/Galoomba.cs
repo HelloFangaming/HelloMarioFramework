@@ -51,6 +51,7 @@ namespace HelloMarioFramework
             flipped = false;
             yield return new WaitForSeconds(1f);
             cooldown = false;
+            animator.SetBool(chaseHash, false);
         }
 
     }
