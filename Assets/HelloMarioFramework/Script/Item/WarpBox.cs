@@ -58,11 +58,18 @@ namespace HelloMarioFramework
         {
             animator = GetComponent<Animator>();
             audioPlayer = gameObject.AddComponent<AudioSource>();
-            animatorDest = dest.GetComponent<Animator>();
 #if UNITY_EDITOR
             if (dest == null)
-                Debug.Log("Hello Mario Framework: Warp Box at " + transform.position + " is missing a destination!");
+            {
+                Debug.LogWarning("Hello Mario Framework: Warp Box at " + transform.position + " is missing a destination!");
+                if (UnityEditor.EditorUtility.DisplayDialog("Hello Mario Framework", "Warp Box at " + transform.position + " is missing a destination!", "Select GameObject", "Ignore"))
+                {
+                    UnityEditor.Selection.activeGameObject = gameObject;
+                    UnityEditor.EditorGUIUtility.PingObject(gameObject.GetInstanceID());
+                }
+            }
 #endif
+            animatorDest = dest.GetComponent<Animator>();
         }
 
         //Warp Mario to destination

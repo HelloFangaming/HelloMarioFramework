@@ -31,7 +31,14 @@ namespace HelloMarioFramework
             myRigidBody = GetComponent<Rigidbody>();
 #if UNITY_EDITOR
             if (button == null)
-                Debug.Log("Hello Mario Framework: ItemSpawnButton at " + transform.position + " is missing a button!");
+            {
+                Debug.LogWarning("Hello Mario Framework: ItemSpawnButton at " + transform.position + " is missing a button!");
+                if (UnityEditor.EditorUtility.DisplayDialog("Hello Mario Framework", "ItemSpawnButton at " + transform.position + " is missing a button!", "Select GameObject", "Ignore"))
+                {
+                    UnityEditor.Selection.activeGameObject = gameObject;
+                    UnityEditor.EditorGUIUtility.PingObject(gameObject.GetInstanceID());
+                }
+            }
 #endif
         }
 

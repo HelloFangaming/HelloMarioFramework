@@ -37,7 +37,7 @@ namespace HelloMarioFramework
 #if UNITY_EDITOR
             if (scene == null)
             {
-                Debug.Log("Hello Mario Framework: Scene variable not set. Returning to title screen!");
+                Debug.Log("Hello Mario Framework: Hub scene not set. Returning to title screen! (The hub scene will be set if you start the game from the title screen)");
                 asyncLoad = SceneManager.LoadSceneAsync(0);
             }
             else

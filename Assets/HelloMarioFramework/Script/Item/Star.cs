@@ -39,7 +39,14 @@ namespace HelloMarioFramework
                 transform.GetChild(0).GetChild(2).GetComponent<SkinnedMeshRenderer>().material = collectedStar;
 #if UNITY_EDITOR
             if (starName == "")
-                Debug.Log("Hello Mario Framework: Star at " + transform.position + " is missing a name! All stars must have a unique name! This is how stars are tracked!");
+            {
+                Debug.LogWarning("Hello Mario Framework: Star at " + transform.position + " is missing a name! All stars must have a unique name! This is how stars are tracked!");
+                if (UnityEditor.EditorUtility.DisplayDialog("Hello Mario Framework", "Star at " + transform.position + " is missing a name! All stars must have a unique name! This is how stars are tracked!", "Select GameObject", "Ignore"))
+                {
+                    UnityEditor.Selection.activeGameObject = gameObject;
+                    UnityEditor.EditorGUIUtility.PingObject(gameObject.GetInstanceID());
+                }
+            }
 #endif
         }
 

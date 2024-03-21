@@ -121,6 +121,27 @@ namespace HelloMarioFramework
 #if UNITY_EDITOR
             //Null check
             SaveData.NullCheck();
+
+            //Give the dev a warning if there are multiple cameras in scene, or the camera is set up incorrectly
+            CinemachineBrain brain = null;
+            foreach (Camera c in FindObjectsByType<Camera>(FindObjectsSortMode.None))
+            {
+                if (brain == null) brain = c.GetComponent<CinemachineBrain>();
+                if (brain == null)
+                {
+                    Debug.LogWarning("Hello Mario Framework: Extra camera found at " + c.transform.position + ". Please delete this camera!");
+                    if (UnityEditor.EditorUtility.DisplayDialog("Hello Mario Framework", "Extra camera found at " + c.transform.position + ". Please delete this camera!", "Select GameObject", "Ignore"))
+                    {
+                        UnityEditor.Selection.activeGameObject = c.gameObject;
+                        UnityEditor.EditorGUIUtility.PingObject(c.gameObject.GetInstanceID());
+                    }
+                }
+            }
+            if (brain == null)
+            {
+                Debug.LogWarning("Hello Mario Framework: Your scene is not set up correctly. Place down a Control prefab! (Assets > HelloMarioFramework > Prefab > Menu)");
+                UnityEditor.EditorUtility.DisplayDialog("Hello Mario Framework", "Your scene is not set up correctly. Place down a Control prefab! (Assets > HelloMarioFramework > Prefab > Menu)", "Ok");
+            }
 #endif
         }
         
