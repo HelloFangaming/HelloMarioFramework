@@ -76,6 +76,9 @@ namespace HelloMarioFramework
             reflections.enabled.value = OptionsSave.save.screenSpaceReflections;
             dof.enabled.value = OptionsSave.save.depthOfField;
 
+            //Disable depth of field if the camera is orthographic
+            if (Camera.main.orthographic) dof.enabled.value = false;
+
             //Change camera settings
             if (FreeLookHelper.singleton != null)
                 FreeLookHelper.singleton.LoadSettings();
