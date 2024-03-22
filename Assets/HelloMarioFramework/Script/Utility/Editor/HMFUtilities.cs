@@ -12,6 +12,7 @@ using System.IO;
 using UnityEngine;
 using UnityEditor;
 
+#if UNITY_EDITOR
 namespace HelloMarioFramework
 {
     public static class HMFUtilities
@@ -53,3 +54,4 @@ namespace HelloMarioFramework
         }
     }
 }
+#endif
