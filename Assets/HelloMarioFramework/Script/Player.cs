@@ -279,7 +279,7 @@ namespace HelloMarioFramework
                 //Movement
 
                 //Acceleration multiplier to use
-                float accel = Vector3.Dot(direction, new Vector3(myRigidBody.velocity.x, 0, myRigidBody.velocity.z).normalized) * -12.5f * Time.fixedDeltaTime + (37.5f * Time.fixedDeltaTime);
+                float accel = Vector3.Dot(direction, new Vector3(myRigidBody.velocity.x, 0f, myRigidBody.velocity.z).normalized) * -12.5f * Time.fixedDeltaTime + (37.5f * Time.fixedDeltaTime);
                 if (!onGround) accel *= 0.5f;
 
                 //Speed cap
