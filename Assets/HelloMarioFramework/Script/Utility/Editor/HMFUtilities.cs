@@ -44,7 +44,7 @@ namespace HelloMarioFramework
         [MenuItem("Hello Mario Framework/Realtime-CSG Tutorial", false, 20)]
         private static void RealtimeCSGTutorial()
         {
-            Application.OpenURL("https://realtimecsg.com/#lightning-fast-level-design--prototyping-tool");
+            Application.OpenURL("https://logicalerror.github.io/realtime-csg/");
         }
 
         [MenuItem("Hello Mario Framework/Hello Mario Framework Website", false, 21)]
