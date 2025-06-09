@@ -52,6 +52,12 @@ namespace HelloMarioFramework
         {
             Application.OpenURL("https://hellofangaming.github.io/HelloMarioFramework/");
         }
+
+        [MenuItem("Hello Mario Framework/Hello Fangaming Website", false, 22)]
+        private static void HFWebsite()
+        {
+            Application.OpenURL("https://hellofangaming.github.io/");
+        }
     }
 }
 #endif
