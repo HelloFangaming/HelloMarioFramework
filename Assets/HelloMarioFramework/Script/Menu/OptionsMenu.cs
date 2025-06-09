@@ -269,7 +269,8 @@ namespace HelloMarioFramework
                     {
                         if (optionsIndex[FRAME_RATE] != 30)
                         {
-                            if (optionsIndex[FRAME_RATE] == 60) optionsIndex[FRAME_RATE] = 30;
+                            if (optionsIndex[FRAME_RATE] == 60) optionsIndex[FRAME_RATE] = 40;
+                            else if (optionsIndex[FRAME_RATE] == 40) optionsIndex[FRAME_RATE] = 30;
                             else optionsIndex[FRAME_RATE] = 60;
                             audioPlayer.PlayOneShot(changeOptionSFX);
                             UpdateText(FRAME_RATE);
@@ -280,7 +281,8 @@ namespace HelloMarioFramework
                     {
                         if (optionsIndex[FRAME_RATE] != 0)
                         {
-                            if (optionsIndex[FRAME_RATE] == 30) optionsIndex[FRAME_RATE] = 60;
+                            if (optionsIndex[FRAME_RATE] == 30) optionsIndex[FRAME_RATE] = 40;
+                            else if (optionsIndex[FRAME_RATE] == 40) optionsIndex[FRAME_RATE] = 60;
                             else optionsIndex[FRAME_RATE] = 0;
                             audioPlayer.PlayOneShot(changeOptionSFX);
                             UpdateText(FRAME_RATE);
